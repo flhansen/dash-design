@@ -1,0 +1,83 @@
+.textfield {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 250px;
+
+  &.labeled {
+    margin-top: 12px;
+  }
+
+  .input {
+    position: relative;
+
+    input {
+      box-sizing: border-box;
+      padding: 8px 8px 8px 8px;
+      border-radius: 4px;
+      font-size: 0.875em;
+      letter-spacing: 0.0174em;
+      font-family: Poppins;
+      border: 1px solid #e1eaf5;
+      outline: none;
+      color: rgb(64, 71, 83);
+      transition: border-color 200ms;
+      width: 100%;
+
+      &:focus {
+        border-color: #5d8fd9;
+      }
+    }
+  }
+
+  .typography p {
+    pointer-events: none;
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+
+  .leading-icon {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: 1px solid #e1eaf5;
+    background: rgba(208, 216, 227, 0.1);
+    padding: 7.5px 8px;
+    box-sizing: border-box;
+    transition: border-color 200ms;
+
+    svg {
+      fill: #5d8fd9;
+    }
+  }
+
+  .trailing-icon {
+    display: inline-block;
+    line-height: 0;
+    position: absolute;
+    top: 7.5px;
+    right: 8px;
+    pointer-events: none;
+
+    svg {
+      fill: #909eb1;
+    }
+  }
+
+  &.leading input {
+    padding-left: 48px;
+  }
+
+  & input:focus + .leading-icon {
+    border-color: #5d8fd9;
+  }
+
+  &.trailing input {
+    padding-right: 40px;
+  }
+}

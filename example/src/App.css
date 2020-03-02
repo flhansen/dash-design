@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.nospacing {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.card-spacing {
+  box-sizing: border-box;
+  padding: 48px !important;
+}
