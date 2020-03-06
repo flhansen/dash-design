@@ -22,7 +22,7 @@ export default function App() {
                       <div className="container-fluid">
                         <div className="row align-items-end">
                           <div className="col">
-                            <TextField style={{ width: '100%' }} label='Titel der Tätigkeit' />
+                            <TextField type='password' style={{ width: '100%' }} label='Titel der Tätigkeit' />
                           </div>
                           <div className="col-2">
                             <Select style={{ width: '100%' }} leadingIcon={<FolderIcon />} label='Projekt auswählen' />
