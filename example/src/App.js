@@ -31,7 +31,7 @@ export default function App() {
                             <Select style={{ width: '100%' }} leadingIcon={<LocalOfferIcon />} label='Tags' />
                           </div>
                           <div className="col-auto">
-                            <Button text='Starten' />
+                            <Button type='secondary' text='Starten' />
                           </div>
                         </div>
                       </div>
