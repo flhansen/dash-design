@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Typography from '../Typography/Typography';
 import './TextField.scss';
 
-function TextField({ leadingIcon, trailingIcon, label, value = '', onTextChange = () => {}, onFocus = () => {}, onBlur = () => {}, ...props }) {
+function TextField({ leadingIcon, type = 'text', trailingIcon, label, value = '', onTextChange = () => {}, onFocus = () => {}, onBlur = () => {}, ...props }) {
 
   const [textValue, setTextValue] = useState(value);
 
@@ -34,7 +34,7 @@ function TextField({ leadingIcon, trailingIcon, label, value = '', onTextChange 
 
       <div className='input'>
         <input
-          type='text'
+          type={type}
           value={textValue}
           onFocus={handleFocus}
           onBlur={handleBlur}
