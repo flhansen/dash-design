@@ -1,7 +1,7 @@
 {
   "name": "dash-design-example",
   "homepage": "https://kluddizz.github.io/dash-design",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "private": true,
   "dependencies": {
