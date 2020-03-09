@@ -10,19 +10,21 @@
 npm install --save dash-design
 ```
 
-## Usage
+## Example Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react';
 
-import MyComponent from 'dash-design'
+import { Card, Button } from 'dash-design';
 
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+function MyComponent() {
+
+  return (
+    <Card title='My Card'>
+      <Button text='This is a button' />
+    </Card>
+  );
+
 }
 ```
 
