@@ -3,7 +3,7 @@ import TextField from '../TextField/TextField';
 import { ReactComponent as ArrowDownSvg } from '../Img/arrow_down.svg';
 import './Select.scss';
 
-function Select({ value, options = [], leadingIcon, trailingIcon = <ArrowDownSvg />, onSelectItem = () => {}, label, ...props }) {
+function Select({ value, options = [], leadingIcon, trailingIcon = <ArrowDownSvg />, onTextChange = () => {}, onSelectItem = () => {}, label, ...props }) {
 
   const optionsContainer = useRef();
   const [text, setText] = useState(value);
@@ -18,10 +18,12 @@ function Select({ value, options = [], leadingIcon, trailingIcon = <ArrowDownSvg
 
   const handleItemClick = option => {
     onSelectItem(option);
+    onTextChange(option.name);
     setText(option.name);
   };
 
   const handleTextChange = text => {
+    onTextChange(text);
     setText(text);
   }
 
