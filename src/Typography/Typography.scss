@@ -39,6 +39,13 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
+
+    &.secondary {
+      font-size: 0.75em;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.4);
+      letter-spacing: 0.1em;
+    }
   }
 
 }

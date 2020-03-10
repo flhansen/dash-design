@@ -58,7 +58,7 @@ export default function App() {
                     </Card>
                   </div>
                   <div className="col-auto pl-0 ml-4">
-                    <Card title='Aktuelle Zeiterfassung'>
+                    <Card title='Aktuelle Zeiterfassung' subtitle='Beispielprojekt'>
                       <div className="container-fluid nospacing">
                         <div className="row justify-content-center">
                           <div className="col-auto">
