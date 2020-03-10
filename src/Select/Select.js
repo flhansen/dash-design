@@ -3,17 +3,17 @@ import TextField from '../TextField/TextField';
 import { ReactComponent as ArrowDownSvg } from '../Img/arrow_down.svg';
 import './Select.scss';
 
-function Select({ value = '', options = [], leadingIcon, trailingIcon = <ArrowDownSvg />, onTextChange = () => {}, onSelectItem = () => {}, label, ...props }) {
+function Select({ value = '', options = [], actions, leadingIcon, trailingIcon = <ArrowDownSvg />, onTextChange = () => {}, onSelectItem = () => {}, label, ...props }) {
 
-  const optionsContainer = useRef();
+  const popupRef = useRef();
   const [text, setText] = useState(value);
 
   const handleFocus = e => {
-    optionsContainer.current.classList.add('visible');
+    popupRef.current.classList.add('visible');
   };
 
   const handleBlur = e => {
-    optionsContainer.current.classList.remove('visible');
+    popupRef.current.classList.remove('visible');
   };
 
   const handleItemClick = option => {
@@ -34,19 +34,26 @@ function Select({ value = '', options = [], leadingIcon, trailingIcon = <ArrowDo
   return (
     <div className="select" {...props}>
       <TextField value={text} leadingIcon={leadingIcon} trailingIcon={trailingIcon} style={{ width: '100%' }} label={label} onFocus={handleFocus} onBlur={handleBlur} onTextChange={handleTextChange} />
-      <div className="options" ref={optionsContainer}>
-        {
-          options
-            .filter(filter)
-            .map((option, idx) => (
-              <div
-                className="option"
-                key={idx}
-                onMouseDown={() => handleItemClick(option)}>
-                {option.name}
-              </div>
-            ))
-        }
+      <div className="select__popup" ref={popupRef}>
+        <div className="select__popup-options">
+          {
+            options
+              .filter(filter)
+              .map((option, idx) => (
+                <div
+                  className="option"
+                  key={idx}
+                  onMouseDown={() => handleItemClick(option)}>
+                  {option.name}
+                </div>
+              ))
+          }
+        </div>
+        { actions ?
+          <div className="select__popup-actions">
+            {actions}
+          </div>
+        : null }
       </div>
     </div>
   );

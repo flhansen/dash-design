@@ -7,6 +7,15 @@ import './App.css';
 
 export default function App() {
 
+  const options = [
+    {
+      name: 'Test 1'
+    },
+    {
+      name: 'Test 2'
+    }
+  ];
+
   return (
     <Router>
       <div className="app">
@@ -25,7 +34,14 @@ export default function App() {
                             <TextField type='password' style={{ width: '100%' }} label='Titel der Tätigkeit' />
                           </div>
                           <div className="col-2">
-                            <Select style={{ width: '100%' }} leadingIcon={<FolderIcon />} label='Projekt auswählen' />
+                            <Select
+                              style={{ width: '100%' }}
+                              leadingIcon={<FolderIcon />}
+                              label='Projekt auswählen'
+                              options={options}
+                              actions={(
+                                <Button type='secondary' size='small' text='Neues Projekt' onMouseDown={() => console.log('Click')} />
+                              )} />
                           </div>
                           <div className="col-2">
                             <Select style={{ width: '100%' }} leadingIcon={<LocalOfferIcon />} label='Tags' />

@@ -7,6 +7,10 @@ button {
   font-size: 16px;
   transition: background-color 200ms, box-shadow 200ms;
 
+  &.small {
+    font-size: 14px;
+  }
+
   & .typography p {
     transition: color 200ms;
   }

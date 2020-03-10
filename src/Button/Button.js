@@ -2,10 +2,10 @@ import React from 'react';
 import Typography from '../Typography/Typography';
 import './Button.scss';
 
-function Button({ text, type = 'filled', ...props }) {
+function Button({ text, type = 'filled', size = 'medium', ...props }) {
 
   return (
-    <button className={type} {...props}>
+    <button className={type + ' ' + size} {...props}>
       <Typography type='button'>{text}</Typography>
     </button>
   );
