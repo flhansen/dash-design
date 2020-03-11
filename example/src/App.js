@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Button, Table, Clock, TextField, Chip, Select, Card } from 'dash-design'
+import { Button, Table, Clock, TextField, Chip, Select, Card, SvgButton } from 'dash-design'
 import FolderIcon from '@material-ui/icons/Folder';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import './App.css';
@@ -66,7 +66,7 @@ export default function App() {
                                 ['Platzierung', 'Anwendung', 'Dauer', 'Prozent']
                               }
                               data={[
-                                ['Test', 'Test', 'Test', <Button style={{ height: 50 }} text='Löschen' />]
+                                ['Test', 'Test', 'Test', <SvgButton img={FolderIcon} />]
                               ]} />
                           </div>
                         </div>

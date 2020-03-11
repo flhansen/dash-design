@@ -1,4 +1,4 @@
-button {
+.button {
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -12,6 +12,7 @@ button {
   }
 
   & .typography p {
+    background: transparent;
     transition: color 200ms;
   }
 

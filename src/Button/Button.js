@@ -5,7 +5,7 @@ import './Button.scss';
 function Button({ text, type = 'filled', size = 'medium', ...props }) {
 
   return (
-    <button className={type + ' ' + size} {...props}>
+    <button className={'button ' + type + ' ' + size} {...props}>
       <Typography type='button'>{text}</Typography>
     </button>
   );
