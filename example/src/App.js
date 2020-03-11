@@ -66,7 +66,7 @@ export default function App() {
                                 ['Platzierung', 'Anwendung', 'Dauer', 'Prozent']
                               }
                               data={[
-                                ['Test', 'Test', 'Test', <SvgButton img={FolderIcon} />]
+                                ['Test', 'Test', 'Test', <SvgButton img={FolderIcon} onClick={() => console.log('click')} />]
                               ]} />
                           </div>
                         </div>
