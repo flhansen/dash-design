@@ -66,7 +66,7 @@ export default function App() {
                                 ['Platzierung', 'Anwendung', 'Dauer', 'Prozent']
                               }
                               data={[
-                                ['Test', 'Test', 'Test', 'Test']
+                                ['Test', 'Test', 'Test', <Button style={{ height: 50 }} text='Löschen' />]
                               ]} />
                           </div>
                         </div>
