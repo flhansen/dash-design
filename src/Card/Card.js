@@ -7,11 +7,15 @@ function Card({ title, subtitle, ...props }) {
   return (
     <div className="card" {...props}>
       { title ?
-        <div className="card__title">
-          <Typography type='heading'>{title}</Typography>
+        <div className="card__titlebar">
+          <div className="card__titlebar-title">
+            <Typography type='heading'>{title}</Typography>
+          </div>
 
           { subtitle ?
-            <Typography type='secondary'>{subtitle}</Typography>
+            <div className="card__titlebar-subtitle">
+              <Typography type='secondary'>{subtitle}</Typography>
+            </div>
           : null }
         </div>
       : null }
