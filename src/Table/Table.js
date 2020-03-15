@@ -20,7 +20,7 @@ function Table({ headers = [], data = [], onClickItem = () => {}, ...props }) {
             {
               data.map((d, idx) => {
                 const handleClick = () => {
-                  onClickItem(d);
+                  onClickItem(d, idx);
                 };
 
                 return (
