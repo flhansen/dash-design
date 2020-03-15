@@ -29,6 +29,14 @@
       &:last-child {
         border: none;
       }
+
+      &.items {
+        cursor: pointer;
+      }
+
+      &.items:hover {
+        background: rgba(0, 0, 0, 0.01);
+      }
     }
 
   }
