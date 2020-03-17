@@ -2,10 +2,10 @@ import React from 'react';
 import Typography from '../Typography/Typography';
 import './Card.scss'
 
-function Card({ title, subtitle, ...props }) {
+function Card({ title, subtitle, disabled, ...props }) {
 
   return (
-    <div className="card" {...props}>
+    <div className={"card" + (disabled ? ' disabled' : '')} {...props}>
       { title ?
         <div className="card__titlebar">
           <div className="card__titlebar-title">
