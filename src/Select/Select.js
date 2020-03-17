@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import TextField from '../TextField/TextField';
 import { ReactComponent as ArrowDownSvg } from '../Img/arrow_down.svg';
 import './Select.scss';
@@ -30,6 +30,10 @@ function Select({ value = '', options = [], actions, leadingIcon, trailingIcon =
   const filter = option => {
     return option.name.toUpperCase().includes(text.toUpperCase());
   };
+
+  useEffect(() => {
+    setText(value);
+  }, [value]);
 
   return (
     <div className="select" {...props}>
