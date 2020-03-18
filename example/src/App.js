@@ -1,8 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Button, Table, Clock, TextField, Chip, Select, Card, SvgButton } from 'dash-design'
+import { Spinner, Button, Table, Clock, TextField, Chip, Select, Card, SvgButton } from 'dash-design'
 import FolderIcon from '@material-ui/icons/Folder';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import Loop from '@material-ui/icons/Loop';
 import './App.css';
 
 export default function App() {
@@ -66,7 +67,7 @@ export default function App() {
                                 ['Platzierung', 'Anwendung', 'Dauer', 'Prozent']
                               }
                               data={[
-                                ['Test', 'Test', 'Test', <SvgButton img={FolderIcon} onClick={e => { e.stopPropagation(); console.log('click')}} />]
+                                ['Test', 'Test', <Spinner icon={Loop} />, <SvgButton img={FolderIcon} onClick={e => { e.stopPropagation(); console.log('click')}} />]
                               ]}
                               onClickItem={item => console.log(item)}/>
                           </div>

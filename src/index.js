@@ -7,3 +7,4 @@ export { default as Clock } from './Clock/Clock';
 export { default as Typography } from './Typography/Typography';
 export { default as Table } from './Table/Table';
 export { default as SvgButton } from './SvgButton/SvgButton';
+export { default as Spinner } from './Spinner/Spinner';

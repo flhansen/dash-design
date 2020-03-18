@@ -5,7 +5,7 @@ function Typography({ type, ...props }) {
 
   return (
     <div className="typography">
-      <p className={type ? type : null}>{props.children}</p>
+      <span className={'text' + (type ? ' ' + type : '')}>{props.children}</span>
     </div>
   );
 
