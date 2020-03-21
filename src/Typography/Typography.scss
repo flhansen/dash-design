@@ -7,6 +7,20 @@
     padding: 0;
     font-family: Poppins;
 
+    &.h1 {
+      font-size: 1.5em;
+      font-weight: 520;
+      letter-spacing: 0.028em;
+      color: #616c7d;
+    }
+
+    &.h2 {
+      font-size: 1.25em;
+      font-weight: 520;
+      letter-spacing: 0.028em;
+      color: #616c7d;
+    }
+
     &.heading {
       font-size: 1.125em;
       font-weight: 520;
@@ -14,7 +28,7 @@
       color: #616c7d;
     }
 
-    &.button {
+    &.interactive {
       font-weight: 600;
       font-size: 0.875em;
       letter-spacing: 0.05em;

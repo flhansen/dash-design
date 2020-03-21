@@ -6,7 +6,7 @@ function Button({ text, type = 'filled', size = 'medium', ...props }) {
 
   return (
     <button className={'button ' + type + ' ' + size} {...props}>
-      <Typography type='button'>{text}</Typography>
+      <Typography type='interactive'>{text}</Typography>
     </button>
   );
 

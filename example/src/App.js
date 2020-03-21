@@ -1,6 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Spinner, Button, Table, Clock, TextField, Chip, Select, Card, SvgButton } from 'dash-design'
+import { Typography, Spinner, Button, Table, Clock, TextField, Chip, Select, Card, SvgButton } from 'dash-design'
 import FolderIcon from '@material-ui/icons/Folder';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import Loop from '@material-ui/icons/Loop';
@@ -18,8 +17,18 @@ export default function App() {
   ];
 
   return (
-    <Router>
       <div className="app">
+        <div className="px-5 pt-5">
+          <Typography type='h1'>H1 Example text</Typography>
+          <Typography type='h2'>H2 Example text</Typography>
+          <Typography type='heading'>Heading Example text</Typography>
+          <Typography type='interactive'>Interactive Example text</Typography>
+          <Typography type='body1'>Body1 Example text</Typography>
+          <Typography type='body2'>Body2 Example text</Typography>
+          <Typography type='caption'>Caption Example text</Typography>
+          <Typography type='secondary'>Secondary Example text</Typography>
+        </div>
+
         <div className="container-fluid">
           <div className="row" style={{ minHeight: '100vh' }}>
             <div className="col-auto nospacing">
@@ -104,7 +113,6 @@ export default function App() {
         </div>
 
       </div>
-    </Router>
   );
 
 }
